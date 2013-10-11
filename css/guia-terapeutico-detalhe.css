@@ -1,0 +1,212 @@
+.proprietarioUl {
+	padding-top: 30px;
+	margin-top: 30px;
+	border-top: 1px solid #c5c5c5;
+}
+
+.sidebarInfosLiTitulo {
+	font-size: 18px;
+	text-transform: uppercase;
+	padding-bottom: 15px;
+}
+
+.sidebarMedicamento {
+	width: 205px;
+	text-align: left;
+	float: left;
+}
+
+.sidebarMedicamentoTitulo {
+	font-family: 'savignymedium_cond', arial, sans-serif;
+	font-size: 40px;
+	display: block;
+	color: #717171;
+	line-height: 1em;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.sidebarMedicamentoImg {
+	display: block;
+	width: 100%;
+}
+
+.formula {
+	margin: 55px 0;
+}
+
+.formulaTitulo,
+.formulaDescricao,
+.contem {
+	font-family: 'savignyregular_cond', arial, sans-serif;
+	display: block;
+	font-size: 18px;
+	color: #717171;
+	line-height: 1.2em;
+}
+
+.formulaTitulo {
+	font-family: 'savignymedium_cond', arial, sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+	line-height: 1em;
+}
+
+.contem,
+.formulaDescricao {
+	font-size: 16px;
+}
+
+.btVoltar {
+	background: #f2f2f2;
+	border: 1px solid #D5D5D5;
+	font-family: 'savignyregular_cond', arial, sans-serif;
+	font-size: 16px;
+	display: block;
+	text-align: center;
+	padding: 12px 0;
+	color: #717171;
+	margin-top: 15px;
+	max-width: 170px;
+}
+
+.btVoltar span {
+	background: url('../img/icones/agenda.png') no-repeat 0 2px;
+	padding-left: 30px;
+	line-height: 17px;
+}
+
+.btVoltar:hover {
+	background: #D5D5D5;
+	color: #717171;
+}
+
+
+.conteudoMedicamentos {
+	width: 70%;
+	float: right;
+	text-align: left;
+}
+
+.blocoGuia {
+	max-width: 400px;
+	margin-bottom: 50px;
+}
+
+.blocoTitulo {
+	font-family: 'savignymedium_cond', arial, sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+	color: #717171;
+	margin-bottom: 15px;
+	display: block;
+}
+
+.blocoDescricao {
+	font-family: 'savignyregular_cond', arial, sans-serif;
+	font-size: 14px;
+	display: block;
+	line-height: 16px;
+	color: #717171;
+}
+
+.tabelaInformacoes {
+	width: 100%;
+	margin: 20px 0 60px;
+	border-spacing: 0px;
+	font-family: 'MyriadPro-Regular';
+	font-size: 12px;
+}
+
+.tabelaInformacoes thead th {
+	text-transform: uppercase;
+	font-weight: normal;
+	height: 40px;
+}
+
+.tabelaInformacoes thead th,
+.tabelaInformacoes tr td {
+	height: 40px;
+	vertical-align: middle;
+	padding-left: 12px;
+}
+
+.tabelaInformacoes tr td {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border-right: 1px solid #f5f5f5;
+}
+
+.bgTitulo {
+	background: #717171;
+	color: #FFF;
+	border-right: 1px solid #f5f5f5;
+	text-align: left;
+}
+
+.bgTitulo1 {
+	width: 52px;
+}
+
+.bgTitulo2 {
+	width: 110px;
+}
+
+.bgTitulo3 {
+	width: 100px;
+}
+
+
+.tabelaInformacoes .tr1 {
+	background: #f2f2f2;
+	color: #717171;
+}
+
+.tabelaInformacoes .tr2 {
+	background: #e8e8e8;
+	color: #717171;
+}
+
+
+.guiaInfos {
+	border: 2px solid #dc2a35;
+	padding: 30px;
+}
+
+.guiaInfosLi {
+	display: block;
+	font-family: 'savignyregular_cond', arial, sans-serif;
+	font-size: 20px;
+	display: block;
+	color: #717171;
+	padding-bottom: 5px;
+	line-height: 1em;
+}
+
+.guiaInfosLiTitulo,
+.guiaInfosLiFone {
+	font-family: 'savignymedium_cond', arial, sans-serif;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+
+.guiaInfosLiFone {
+	font-size: 30px;
+	color: #dc2a35;
+}
+
+.guiaInfosLiMargem {
+	margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 1245px) {
+	.conteudoMedicamentos {
+		width: 60%;
+	}
+}
+
+
+
+
+

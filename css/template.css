@@ -1,0 +1,947 @@
+@import url('erros.css');
+
+/* RESET */
+html {height:100%;overflow:auto;}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;background:transparent;}
+h1,h2,h3,h4,h5,h6 {font-weight:normal;}
+body {line-height:1em;text-align:center;color:#000;font-size:12px;font-family:Arial,Helvetica,sans-serif;}
+ul {list-style:none;}
+blockquote,q {quotes:none;}
+hr {display:none;}
+textarea {overflow:auto;}
+select {-webkit-appearance:none;}
+button {padding:0;border:none;cursor:pointer;background:none;}
+iframe {border:none;overflow:hidden;}
+* {outline:0 none;}
+a,a:hover {text-decoration:none;}
+/* CLEARFIX */
+.clearfix:after {content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;}
+.clearfix display:inline-block;}
+html[xmlns] .clearfix {display:block;}
+/* CLASSES PADROES */
+.ir {text-indent:-100%;overflow:hidden;white-space:nowrap;display:inline-block;font-size:0;line-height:0;}
+.table {display:table;}
+.table-cell {display:table-cell;vertical-align:middle;text-align:center;}
+
+/* FORMATACAO DOS ELEMENTOS DE TEXTO */
+@font-face {
+	font-family: 'savignyblack_cond';
+	src: url('../fontes/savignyblackcond-webfont.eot');
+	src: url('../fontes/savignyblackcond-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/savignyblackcond-webfont.woff') format('woff'),
+		 url('../fontes/savignyblackcond-webfont.ttf') format('truetype'),
+		 url('../fontes/savignyblackcond-webfont.svg#savignyblack_cond') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'savignyblack_cond_italic';
+	src: url('../fontes/savignyblackconditalic-webfont.eot');
+	src: url('../fontes/savignyblackconditalic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/savignyblackconditalic-webfont.woff') format('woff'),
+		 url('../fontes/savignyblackconditalic-webfont.ttf') format('truetype'),
+		 url('../fontes/savignyblackconditalic-webfont.svg#savignyblack_cond_italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'savignybold_cond';
+	src: url('../fontes/savignyboldcond-webfont.eot');
+	src: url('../fontes/savignyboldcond-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/savignyboldcond-webfont.woff') format('woff'),
+		 url('../fontes/savignyboldcond-webfont.ttf') format('truetype'),
+		 url('../fontes/savignyboldcond-webfont.svg#savignybold_cond') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'savignybold_cond_italic';
+	src: url('../fontes/savignyboldconditalic-webfont.eot');
+	src: url('../fontes/savignyboldconditalic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/savignyboldconditalic-webfont.woff') format('woff'),
+		 url('../fontes/savignyboldconditalic-webfont.ttf') format('truetype'),
+		 url('../fontes/savignyboldconditalic-webfont.svg#savignybold_cond_italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'savignylight_cond';
+	src: url('../fontes/savignylightcond-webfont.eot');
+	src: url('../fontes/savignylightcond-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/savignylightcond-webfont.woff') format('woff'),
+		 url('../fontes/savignylightcond-webfont.ttf') format('truetype'),
+		 url('../fontes/savignylightcond-webfont.svg#savignylight_cond') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'savignylight_cond_italic';
+	src: url('../fontes/savignylightconditalic-webfont.eot');
+	src: url('../fontes/savignylightconditalic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/savignylightconditalic-webfont.woff') format('woff'),
+		 url('../fontes/savignylightconditalic-webfont.ttf') format('truetype'),
+		 url('../fontes/savignylightconditalic-webfont.svg#savignylight_cond_italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'savignymedium_cond';
+	src: url('../fontes/savignymediumcond-webfont.eot');
+	src: url('../fontes/savignymediumcond-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/savignymediumcond-webfont.woff') format('woff'),
+		 url('../fontes/savignymediumcond-webfont.ttf') format('truetype'),
+		 url('../fontes/savignymediumcond-webfont.svg#savignymedium_cond') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'savignymedium_cond_italic';
+	src: url('../fontes/savignymediumconditalic-webfont.eot');
+	src: url('../fontes/savignymediumconditalic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/savignymediumconditalic-webfont.woff') format('woff'),
+		 url('../fontes/savignymediumconditalic-webfont.ttf') format('truetype'),
+		 url('../fontes/savignymediumconditalic-webfont.svg#savignymedium_cond_italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'savignyregular_cond';
+	src: url('../fontes/savignyregularcond-webfont.eot');
+	src: url('../fontes/savignyregularcond-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/savignyregularcond-webfont.woff') format('woff'),
+		 url('../fontes/savignyregularcond-webfont.ttf') format('truetype'),
+		 url('../fontes/savignyregularcond-webfont.svg#savignyregular_cond') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'savignyregular_cond_italic';
+	src: url('../fontes/savignyregularconditalic-webfont.eot');
+	src: url('../fontes/savignyregularconditalic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/savignyregularconditalic-webfont.woff') format('woff'),
+		 url('../fontes/savignyregularconditalic-webfont.ttf') format('truetype'),
+		 url('../fontes/savignyregularconditalic-webfont.svg#savignyregular_cond_italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'savignythin_cond';
+	src: url('../fontes/savignythincond-webfont.eot');
+	src: url('../fontes/savignythincond-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/savignythincond-webfont.woff') format('woff'),
+		 url('../fontes/savignythincond-webfont.ttf') format('truetype'),
+		 url('../fontes/savignythincond-webfont.svg#savignythin_cond') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'savignythin_cond_italic';
+	src: url('../fontes/savignythinconditalic-webfont.eot');
+	src: url('../fontes/savignythinconditalic-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/savignythinconditalic-webfont.woff') format('woff'),
+		 url('../fontes/savignythinconditalic-webfont.ttf') format('truetype'),
+		 url('../fontes/savignythinconditalic-webfont.svg#savignythin_cond_italic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MyriadPro-Regular';
+	src: url('../fontes/myriadproregular.eot');
+	src: url('../fontes/myriadproregular.eot?#iefix') format('embedded-opentype'),
+			 url('../fontes/myriadproregular.woff') format('woff'),
+			 url('../fontes/myriadproregular.ttf') format('truetype'),
+			 url('../fontes/myriadproregular.svg#myriadproregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MyriadPro-Bold';
+	src: url('../fontes/myriadprobold.eot');
+	src: url('../fontes/myriadprobold.eot?#iefix') format('embedded-opentype'),
+		 url('../fontes/myriadprobold.woff') format('woff'),
+		 url('../fontes/myriadprobold.ttf') format('truetype'),
+		 url('../fontes/myriadprobold.svg#myriadprobold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'savignymedium_cond', arial, sans-serif;
+	font-size: 16px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+}
+
+
+/**************
+	GERAL
+**************/
+#header {
+	background: #FFF;
+	height: 171px;
+}
+
+
+.container {
+	margin: 0 auto;
+	position: relative;
+}
+
+.geralTransition {
+	-moz-transition: all .3s;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+
+.content {
+	padding-top: 55px;
+}
+
+.conteudoGeral {
+	position: relative;
+	padding: 0 30px 0 252px;
+}
+
+
+
+/**************
+	SIDEBAR
+**************/
+.navSidebar {
+	background: #717171;
+	margin-top: 63px;
+	position: fixed;
+	left: 0;
+	width: 209px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border-top-left-radius:0;
+	border-bottom-left-radius:0;
+	z-index: 10;
+}
+
+.sidebarLi {
+	background: none;
+	text-align: left;
+	border-bottom: 1px solid #828282;
+	margin-left: -45px;
+	padding-left: 20px;
+}
+
+.sidebarLiAtivo,
+.sidebarLi:hover {
+	background: #dc2a35;
+	margin-left: 0px;
+}
+
+.sidebarLiFirst {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border-top-left-radius:0;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
+}
+
+.sidebarLiLast {
+	border-bottom: none;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border-top-left-radius:0;
+	border-top-right-radius:0;
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:10px;
+}
+
+.sidebarLink {
+	background: url('../img/icones/sidebar.png') no-repeat;
+	display: block;
+	color: #b6b6b6;
+	text-transform: uppercase;
+	padding: 28px 0 0 60px;
+	height: 57px;
+}
+
+.sidebarLink span {
+	display: block;
+}
+
+.sidebarLiAtivo .sidebarLink,
+.sidebarLi:hover .sidebarLink {
+	color: #FFF;
+}
+
+.sidebarLinkInicial {
+	background-position: 0 21px;
+	line-height: 37px; 
+}
+
+.sidebarLiAtivo .sidebarLinkInicial,
+.sidebarLi:hover .sidebarLinkInicial {
+	background-position: 0 -434px; 
+}
+
+.sidebarLinkArquivo {
+	background-position: 0 -94px; 
+}
+
+.sidebarLiAtivo .sidebarLinkArquivo,
+.sidebarLi:hover .sidebarLinkArquivo {
+	background-position: 0 -549px; 
+}
+
+.sidebarLinkAcessar {
+	background-position: 0 -207px; 
+}
+
+.sidebarLiAtivo .sidebarLinkAcessar,
+.sidebarLi:hover .sidebarLinkAcessar {
+	background-position: 0 -662px; 
+}
+
+.sidebarLinkGuia {
+	background-position: 0 -320px; 
+}
+
+.sidebarLiAtivo .sidebarLinkGuia,
+.sidebarLi:hover .sidebarLinkGuia {
+	background-position: 0 -775px; 
+}
+
+
+
+
+
+
+/**************
+	HEADER GUIA
+**************/
+.headerGuia {
+	border: 2px solid #e2e1e1;
+	position: absolute;
+	top: -77px;
+	left: 252px;
+	right: 0;
+	height: 95px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	border-top-right-radius:0;
+	border-bottom-right-radius:0;
+}
+
+.blocoSair {
+	float: left;
+	margin: 25px 0 0 50px;
+}
+
+.titulo {
+	color: #d71925;
+	display: block;
+}
+
+.titulo span {
+	display: block;
+}
+
+.blocoSair .titulo {
+	font-family: 'savignyregular_cond', arial, sans-serif;
+	color: #d71925;
+	font-size: 30px;
+	text-align: left;
+	line-height: 25px;
+	float: left;
+}
+
+.btSair {
+	background: #FFF;
+	width: 62px;
+	height: 62px;
+	border: 2px solid #7c7c7c;
+	display: block;
+	position: relative;
+	line-height: 97px;
+	font-family: 'MyriadPro-Regular',arial, sans-serif;
+	color: #717171;
+	font-size: 14px;
+	float: left;
+	margin: -9px 0 0 12px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+}
+
+.btSair:hover {
+	background: #d71925;
+	border-color: #d71925;
+	color: #FFF;
+}
+
+.icone {
+	background: url('../img/icones/inicial.png') no-repeat;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	width: 23px;
+	height: 26px;
+	margin-left: -12px;
+}
+
+.btSair:hover .icone {
+	background-position: -25px 0;
+}
+
+.blocoConsulta {
+	background: url('../img/icones/inicial.png') no-repeat 0 -215px;
+	min-height: 63px;
+	width: 375px;
+	float: right;
+	margin-right: 30px;
+	padding-top: 25px;
+}
+
+.blocoConsulta .titulo {
+	font-family: 'savignymedium_cond', arial, sans-serif;
+	font-size: 18px;
+	text-transform: uppercase;
+	text-align: right;
+	margin-top: -6px;
+}
+
+
+
+
+/**************
+	FORMS
+**************/
+#formBuscaNome {
+	float: right;
+	width: 530px;
+}
+
+.iconeBusca {
+	background: url('../img/icones/lupa.png') no-repeat;
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 50%;
+	left: 18px;
+	margin-top: -9px;
+}
+
+.form .relative {
+	background: #FFF;
+	padding: 14px 15px;
+	line-height: 18px;
+	position: relative;
+	border: 1px solid #e1e1e1;
+	margin: 5px 0 0 30px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+}
+
+#formBuscaNome .relative {
+	padding-left: 55px;
+	margin-top: 0;
+}
+
+.form .label,
+.form .input {
+	font-family: 'MyriadPro-Regular', arial, sans-serif;
+	font-size: 14px;
+	color: #717171;
+	display: block;
+} 
+
+.form .label {
+	position: absolute;
+	top: 17px;
+	left: 15px;
+}
+
+#formBuscaNome .label {
+	left: 55px;
+}
+
+.form .input {
+	border: none;
+	width: 100%;
+}
+
+.form .btBuscar {
+	width: 41px;
+	height: 41px;
+	display: block;
+	position: relative;
+	border: none;
+	position: absolute;
+	top: 3px;
+	right: 3px;
+}
+
+.form .btBuscar .frontBt,
+.form .btBuscar .backBt {
+	background: url('../img/botoes/buscar.png') no-repeat;
+}
+
+.form .btBuscar .frontBt {
+	background-position: 0 0;
+}
+
+.form .btBuscar .backBt {
+	background-position: 0 -41px;
+}
+
+
+
+
+
+
+/**************
+	HEADER CONTEUDO
+**************/
+.headerConteudo {
+	text-align: left;
+	margin-top: 20px;
+	line-height: 50px;
+}
+
+.paginaTitulo {
+	font-family: 'savignyregular_cond', arial, sans-serif;
+	color: #d71925;
+	font-size: 35px;
+	display: block;
+	text-transform: uppercase;
+	float: left;
+}
+
+
+
+/**************
+	LISTAS
+**************/
+.conteudoListas {
+	margin-top: 20px;
+}
+
+.sidebarPerfil {
+	width: 150px;
+	margin-right: 20px;
+	float: left;
+	text-align: left;
+}
+
+.sidebarTitulo,
+.tituloLista {
+	font-family: 'savignymedium_cond', arial, sans-serif;
+	font-size: 18px;
+	display: block;
+	color: #717171;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+}
+
+.sidebarImg {
+	display: block;
+	width: 100%;
+}
+
+.sidebarInfosLi {
+	color: #717171;
+	font-size: 14px;
+	padding-bottom: 4px;
+}
+
+.sidebarInfosLiNome {
+	color: #e32936;
+	font-size: 18px;
+	padding: 5px 0 10px;
+}
+
+.conteudoListaDados {
+	float: right;
+	width: 83%;
+	border-left: 1px solid #dddcdc;
+	padding-left: 23px;
+	text-align: left;
+}
+
+.conteudoListaDados #formBuscaNome {
+	width: 100%;
+	float: none;
+}
+
+.conteudoListaDados #formBuscaNome .relative {
+	margin-left: 0;
+}
+
+
+
+
+
+/**************
+	LISTA DADOS
+**************/
+.listaDadosUl {
+	margin-top: 25px;
+	text-align: left;
+}
+
+.listaDados1 {
+	width: 280px;
+	float: left;
+}
+
+.listaDados2 {
+	width: 325px;
+}
+
+.listaDadosNomeTitulo {
+	padding-left: 65px;
+}
+
+.listaDadosLiTitulo,
+.ListaLetra {
+	padding-left: 20px;
+}
+
+.listaDadosLiTitulo {
+	background: #cecdcd;
+	height: 30px;
+	line-height: 30px;
+}
+
+.listaDadosLiTitulo span,
+.listaDadosLink span {
+	font-family: 'savignymedium_cond', arial, sans-serif;
+	color: #FFF;
+	display: block;
+	float: left;
+	font-size: 14px;
+}
+
+.listaDadosLiTitulo span {
+	text-transform: uppercase;
+}
+
+.ListaLetra {
+	background: #bcbcbc;
+	color: #FFF;
+	text-transform: uppercase;
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	font-size: 13px;
+}
+
+.listaDadosImg {
+	float: left;
+	margin-right: 20px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.listaDadosLink {
+	display: block;
+	padding: 18px 0;
+	border-bottom: 1px solid #bcbcbc;
+	position: relative;
+	line-height: 60px;
+}
+
+.listaDadosLink:hover {
+	background: #dc2a35;
+}
+
+.listaDadosLink span {
+	color: #717171;
+	font-size: 16px;
+	float: left;
+}
+
+.listaDadosLink:hover span {
+	color: #FFF;
+}
+
+.listaDadosIcone,
+.listaDadosIcone2 {
+	background: url('../img/icones/inicial.png') no-repeat -1px -375px;
+	width: 10px;
+	height: 18px;
+}
+
+.listaDadosIcone {
+	float: left;
+	margin: 20px 0 0 10px;
+	margin-left: 10px;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.listaDadosIcone2 {
+	background-position: -1px -375px;
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	margin-top: -9px;
+}
+
+.listaDadosLink:hover .listaDadosIcone {
+	background-position: -13px -375px;
+	margin: 20px 20px 0 20px;
+	opacity: 1;
+	-moz-opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+.listaDadosLink:hover .listaDadosIcone2 {
+	opacity: 0;
+	-moz-opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+
+
+
+/**************
+	HOVERS BTS
+**************/
+.hoverBts .frontBt {
+	float: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 98;
+	width: inherit;
+	height: inherit;
+
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+
+	-moz-transform: rotateX(0deg) rotateY(0deg);
+	-moz-transform-style: preserve-3d;
+	-moz-backface-visibility: hidden;
+
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.hoverBts:hover .frontBt {
+	z-index: 98;
+	-webkit-transform: rotateX(180deg);
+	-moz-transform: rotateX(180deg);
+}
+
+.hoverBts .backBt {
+	opacity: 0;
+	-moz-opacity: 0;
+	filter:alpha(opacity= 0);
+}
+
+.hoverBts .backBt {
+	float: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 97;
+	width: inherit;
+	height: inherit;
+
+	-webkit-transform: rotateX(-180deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+
+	-moz-transform: rotateX(-180deg);
+	-moz-transform-style: preserve-3d;
+	-moz-backface-visibility: hidden;
+
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.hoverBts:hover .backBt {
+	opacity: 1;
+	-moz-opacity: 1;
+	filter:alpha(opacity= 100);
+}
+
+.hoverBts:hover .backBt {
+	z-index: 99;
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	-moz-transform: rotateX(0deg) rotateY(0deg);
+}
+
+
+
+/**************
+	LISTA ARQUIVO DE PROPRIETARIO E GUIA TERAPEUTICO
+**************/
+
+.listaUl {
+	margin-top: 25px;
+	text-align: left;
+}
+
+.listaDados {
+	width: 230px;
+}
+
+
+.listaLiTitulo,
+.letra {
+	padding-left: 20px;
+}
+
+.listaLiTitulo {
+	background: #cecdcd;
+	height: 30px;
+	line-height: 30px;
+}
+
+.listaLiTitulo span,
+.listaLinkDados span {
+	font-family: 'savignymedium_cond', arial, sans-serif;
+	color: #FFF;
+	display: block;
+	font-size: 14px;
+	float: left;
+}
+
+.listaLiTitulo span {
+	text-transform: uppercase;
+}
+
+.letra {
+	background: #bcbcbc;
+	color: #FFF;
+	text-transform: uppercase;
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	font-size: 13px;
+}
+
+.listaLinkDados {
+	display: block;
+	padding: 18px 0;
+	border-bottom: 1px solid #bcbcbc;
+	position: relative;
+}
+
+.listaLinkDados:hover {
+	background: #dc2a35;
+}
+
+.listaLinkDados span {
+	color: #717171;
+	font-size: 16px;
+}
+
+.listaLinkDados:hover span {
+	color: #FFF;
+}
+
+.listaIcone,
+.listaIcone2 {
+	background: url('../img/icones/inicial.png') no-repeat -1px -375px;
+	width: 10px;
+	height: 18px;
+}
+
+.listaIcone {
+	float: left;
+	margin-left: 10px;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.listaIcone2 {
+	background-position: -1px -375px;
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	margin-top: -9px;
+}
+
+.listaLinkDados:hover .listaIcone {
+	background-position: -13px -375px;
+	margin: 0 15px 0 20px;
+	opacity: 1;
+	-moz-opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+.listaLinkDados:hover .listaIcone2 {
+	opacity: 0;
+	-moz-opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+
+
+
+
+@media only screen and (max-width: 1245px) {
+	.blocoSair {
+		margin-left: 30px;
+	}
+
+	.blocoConsulta {
+		width: 325px;
+	}
+	
+	#formBuscaNome {
+		width: 350px;
+	}
+
+	.sidebarPerfil {
+		width: 115px;
+	}
+	
+	.conteudoListaDados {
+		width: 78%;
+	}
+
+	.listaDadosNomeTitulo {
+		padding-left: 0;
+	}
+
+	.listaDados1 {
+		width: 220px;
+	}
+
+	.listaDados2 {
+		width: 190px;
+	}
+}
+
+

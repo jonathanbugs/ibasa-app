@@ -1,0 +1,82 @@
+.proprietarioUl {
+	padding-top: 30px;
+	margin-top: 30px;
+	border-top: 1px solid #c5c5c5;
+}
+
+.sidebarInfosLiTitulo {
+	font-size: 18px;
+	text-transform: uppercase;
+	padding-bottom: 15px;
+}
+
+.btPerfil {
+	background: #f2f2f2;
+	border: 1px solid #D5D5D5;
+	text-transform: uppercase;
+	font-size: 14px;
+	display: block;
+	text-align: center;
+	padding: 7px 0;
+	color: #717171;
+	margin-top: 15px;
+}
+
+.btPerfil:hover {
+	background: #d2352a;
+	color: #FFF;
+	border-color: #d2352a;
+}
+
+
+/**************
+	LISTA DADOS
+**************/
+.listaDadosUl {
+	margin-top: 0;
+}
+
+.listaDados1 {
+	width: 100px;
+}
+
+.listaDados2 {
+	width: 600px;
+	padding-right: 40px;
+}
+
+.listaDados1 span {
+	padding-left: 0;
+}
+
+.listaDadosLink .listaDados1 span,
+.listaDadosLink .listaDados3 span {
+	font-family: 'savignyregular_cond', arial, sans-serif;
+	font-size: 22px;
+}
+
+.listaDadosLink {
+	line-height: 20px;
+	padding: 25px 0;
+}
+
+.listaDados3 span {
+	padding-left: 20px;
+}
+
+.listaDadosIcone,
+.listaDadosLink:hover .listaDadosIcone {
+	margin-top: 0;
+}
+
+
+@media only screen and (max-width: 1245px) {
+	.listaDados2 {
+		width: 290px;
+	}
+}
+
+
+
+
+

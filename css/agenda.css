@@ -1,0 +1,209 @@
+.sidebarAgenda {
+	width: 309px;
+	float: left;
+}
+
+.headerCalendario {
+	border-top: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+}
+
+.calendarioBt,
+.mes {
+	float: left;
+	height: 49px;
+}
+
+.mes {
+	width: 219px;
+	display: block;
+	font-family: 'savignyregular_cond', arial, sans-serif;
+	color: #717171;
+	font-size: 20px;
+	text-align: center;
+	line-height: 49px;
+}
+
+.calendarioBt {
+	background: #f2f2f2;
+	width: 43px;
+	border-left: 1px solid #e4e4e4;
+	border-right: 1px solid #e4e4e4;
+	display: block;
+	position: relative;
+}
+
+.setaBt {
+	background: url('../img/icones/agenda.png') no-repeat;
+	width: 8px;
+	height: 14px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -7px 0 0 -4px;
+}
+
+.calendarioBtProximo .setaBt {
+	-moz-transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
+
+.calendarioBt:hover {
+	background: #cecdcd;
+}
+
+.diaSemanaUl {
+	background: #cecdcd;
+}
+
+.diaSemanaLi,
+.diasLi {
+	float: left;
+	width: 43px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.diaSemanaLi {
+	border-left: 1px solid #cecdcd;
+	font-family: 'savignymedium_cond', arial, sans-serif;
+	color: #FFF;
+	height: 30px;
+	line-height: 30px;
+}
+
+.diaSemanaLiLast {
+	border-right: 1px solid #cecdcd;
+}
+
+.diasUl {
+	background: #f2f2f2;
+}
+
+.diasLi {
+	border-left: 1px solid #d5d5d5;
+	border-bottom: 1px solid #d5d5d5;
+	height: 43px;
+	line-height: 43px;
+}
+
+.diasLiLast {
+	border-right: 1px solid #d5d5d5;
+}
+
+.diasLink {
+	font-family: 'savignyregular_cond', arial, sans-serif;
+	color: #717171;
+	font-size: 20px;
+	display: block;
+} 
+
+.diasLink:hover {
+	background: #d4d4d4;
+}
+
+.diasLinkAtivo {
+	background: #d71925;
+	color: #FFF;
+}
+
+.conteudoListaAgenda {
+	width: 70%;
+	float: right;
+	text-align: left;
+}
+
+.headerData {
+	padding: 0 0 13px 10px;
+	border-bottom: 1px solid #BCBCBC;
+}
+
+.headerData span {
+	font-family: 'savignyregular_cond', arial, sans-serif;
+	font-size: 24px;
+	color: #717171;
+	line-height: 1em;
+	display: block;
+	float: left;
+	padding-top: 23px;
+}
+
+.headerData .diaSemana {
+	font-size: 40px;
+	border-right: 1px solid #e4e4e4;
+	padding: 12px 15px 12px 0;
+	margin-right: 10px;
+}
+
+.listaDadosUl {
+	margin-top: 0;
+}
+
+.listaDados1 {
+	width: 150px;
+}
+
+.listaDados2 {
+	width: 200px;
+}
+
+.listaDadosLink .hora {
+	background: url('../img/icones/consulta.png') no-repeat;
+	padding-left: 40px;
+	font-family: 'savignylight_cond', arial, sans-serif;
+	font-size: 30px;
+}
+
+.listaDadosLink .horaDisponivel {
+	background: none;
+}
+
+.listaDadosLink .horaConsulta {
+	background-position: 0 15px;
+}
+
+.listaDadosLink:hover .horaConsulta {
+	background-position: 0 -86px;
+} 
+
+.listaDadosLink .horaRevisao {
+	background-position: 0 -187px;
+}
+
+.listaDadosLink:hover .horaRevisao {
+	background-position: 0 -279px;
+} 
+
+.listaDados2,
+.listaDados3 {
+	padding-top: 11px;
+}
+
+.listaDados2 span,
+.listaDados3 span {
+	display: block;
+	float: none;
+	line-height: 20px;
+}
+
+.listaDados2 .listaDadosNome,
+.listaDados3 .listaDadosNome {
+	color: #d71925;
+}
+
+.listaDados2 .disponivel {
+	font-family: 'savignylight_cond', arial, sans-serif;
+	font-size: 24px;
+	padding-top: 10px;
+}
+
+
+@media only screen and (max-width: 1245px) {
+	.conteudoListaAgenda {
+		width: 55%;
+	}
+}
+

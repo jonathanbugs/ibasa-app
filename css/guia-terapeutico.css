@@ -1,0 +1,76 @@
+.headerFiltros {
+	margin-top: 10px;
+}
+
+#formBuscaNome {
+	float: left;
+}
+
+#formBuscaNome .relative {
+	margin-left: 0;
+}
+
+.listaMedicamentos {
+	float: right;
+	width: 425px;
+	height: 50px;
+	position: relative;
+}
+
+.listaMedicamentos select {
+	width: 100%;
+	height: 50px;
+}
+
+.listaMedicamentos .chosen-container-single .chosen-single {
+	border: 1px solid #e1e1e1;
+	background: #FFF;
+	text-align: left;
+	height: 48px;
+	line-height: 48px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	position: relative;
+}
+
+.listaMedicamentos .chosen-container-single .chosen-single span,
+.listaMedicamentos .chosen-container .chosen-results li {
+	font-family: 'savignyregular_cond', arial, sans-serif;
+	font-size: 16px;
+	color: #717171;
+	text-align: left;
+}
+
+.listaMedicamentos .chosen-container-single .chosen-single span {
+	z-index: 1011;
+	position: relative;
+	left: 25px;
+}
+
+.listaMedicamentos .chosen-container-single .chosen-single div {
+	background: url('../img/icones/seta.png') no-repeat;
+	width: 15px;
+	height: 8px;
+	right: 20px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+.listaMedicamentos .chosen-container .chosen-results li {
+	padding: 10px 0 10px 22px;
+}
+
+.listaMedicamentos .chosen-container .chosen-results li:hover {
+	background: #dc2a35;
+	color: #FFF;
+}
+
+
+@media only screen and (max-width: 1245px) {
+	.listaMedicamentos {
+		width: 375px;
+	}
+}
+
+

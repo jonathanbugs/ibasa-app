@@ -1,0 +1,122 @@
+.conteudoConsulta {
+	background: url('../img/backgrounds/consulta.png') no-repeat;
+	text-align: left;
+	position: relative;
+	padding: 50px 0 70px 175px;
+	max-width: 700px;
+}
+
+.btAgendaVoltar {
+	background: #FFF;
+	width: 85px;
+	height: 42px;
+	padding: 14px 0 0 65px;
+	border: 2px solid #b9b9b9;
+	position: absolute;
+	top: 310px;
+	left: 0;
+	font-family: 'MyriadPro-Regular', arial, sans-serif;
+	color: #7c7c7c;
+	font-size: 14px;
+	border-right: 0;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	border-top-right-radius:0;
+	border-bottom-right-radius:0; 
+}
+
+.btAgendaVoltar:hover {
+	background: #d71925;
+	color: #FFF;
+	border-color: #d71925;
+}
+
+.btAgendaVoltar .iconeVotar {
+	background: url('../img/icones/voltar.png') no-repeat;
+	width: 36px;
+	height: 36px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.btAgendaVoltar:hover .iconeVotar {
+	background-position: 0 -36px;
+}
+
+.agendaLi {
+	padding: 20px 0 20px 12px;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.agendaTitulo {
+	display: block;
+	font-family: 'savignymedium_cond', arial, sans-serif;
+	text-transform: uppercase;
+	font-size: 18px;
+	color: #717171;
+	float: left;
+	width: 135px;
+	padding-top: 30px;
+}
+
+.agendaLiDataHora .agendaTitulo {
+	padding-top: 25px;
+}
+
+.blocoAgenda {
+	background: url('../img/icones/agenda.png') no-repeat;
+	float: left;
+	min-height: 57px;
+	padding-left: 60px;
+}
+
+.blocoAgenda span {
+	font-family: 'savignyregular_cond', arial, sans-serif;
+	color: #717171;
+	display: block;
+	font-size: 24px;
+	line-height: 0.9em;
+}
+
+.blocoAgenda .diaSemana {
+	font-size: 30px;
+	padding-top: 5px;
+}
+
+.blocoAgendaHora {
+	background-position: 0 -149px;
+	margin-left: 45px;
+	padding-left: 70px;
+}
+
+.blocoAgendaHora span {
+	padding-top: 15px;
+	font-size: 34px;
+}
+
+.agendaImg {
+	display: block;
+	max-width: 70px;
+	float: left;
+	margin-right: 12px;
+}
+
+.agendaInfosUl {
+	float: left;
+}
+
+.agendaInfosLi {
+	font-family: 'savignymedium_cond', arial, sans-serif;
+	font-size: 16px;
+	color: #717171;
+	display: block;
+	padding-bottom: 1px;
+}
+
+.agendaInfosLiNome {
+ 	color: #e32936;
+ 	font-size: 18px;
+ 	padding-bottom: 4px;
+ }
